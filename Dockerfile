@@ -90,5 +90,5 @@ LABEL \
     org.label-schema.name="tinymediamanager" \
     org.label-schema.description="Docker container for TinyMediaManager" \
     org.label-schema.version="unknown" \
-    org.label-schema.vcs-url="https://github.com/dzhuang/tinymediamanager5-docker" \
+    org.label-schema.vcs-url="https://github.com/karlzeo/tinymediamanager5-docker" \
     org.label-schema.schema-version="1.0"

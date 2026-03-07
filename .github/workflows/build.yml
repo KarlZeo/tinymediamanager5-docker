@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       tmmVersion:
-        description: 'Version of tmm.jar'
+        description: "Version of tmm.jar"
         required: true
-        default: '5.0'
+        default: "5.0"
 
 jobs:
   build:
@@ -24,5 +24,5 @@ jobs:
           context: .
           build-args: |
             TMM_VERSION=${{ github.event.inputs.tmmVersion }}
-          tags: dzhuang/tinymediamanager:v${{ github.event.inputs.tmmVersion }}
+          tags: karlzeo/tinymediamanager:v${{ github.event.inputs.tmmVersion }}
           push: true

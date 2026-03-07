@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       toBeTagAsLatestV5:
-        description: 'The image tag which will be tag as latest-v5'
+        description: "The image tag which will be tag as latest-v5"
         required: true
 
 jobs:
@@ -17,6 +17,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Pull and push image
         run: |
-          docker pull dzhuang/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }}
-          docker tag dzhuang/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }} ${{ secrets.DOCKERHUB_USERNAME }}/tinymediamanager:latest-v5
-          docker push dzhuang/tinymediamanager:latest-v5
+          docker pull karlzeo/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }}
+          docker tag karlzeo/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }} ${{ secrets.DOCKERHUB_USERNAME }}/tinymediamanager:latest-v5
+          docker push karlzeo/tinymediamanager:latest-v5
